@@ -1,3 +1,3 @@
-# c
+# adventure in c
 
-adventures of c -> random c projects
+random c projects to learn the language
