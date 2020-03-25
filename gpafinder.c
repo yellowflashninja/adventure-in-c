@@ -13,10 +13,10 @@ int main() {
     int runningtot = 0;
     double gpa;
     char letter[100] = "";
-    char * ca;
-    char * cb;
-    char * cc;
-    char * cd;
+    char *ca;
+    char *cb;
+    char *cc;
+    char *cd;
     int length = 0;
 
     printf("Welcome to the gpa finder \nType in each letter grade received in school in a string of characters\n");
