@@ -12,7 +12,7 @@ int main() {
     //variables
     int runningtot = 0;
     double gpa;
-    char letter[56] = "";
+    char letter[100] = "";
     char * ca;
     char * cb;
     char * cc;
@@ -20,16 +20,14 @@ int main() {
     int length = 0;
 
     printf("Welcome to the gpa finder \nType in each letter grade received in school in a string of characters\n");
-    scanf("%s", &letter);
+    fgets(letter, 100, stdin);
     
-    printf("%d\n", runningtot);
     ca = strchr(letter,'a');
     while (ca != NULL) { 
         runningtot += a;
         length++;
         ca = strchr(ca+1,'a');
     }
-    printf("%d\n", runningtot);
     cb = strchr(letter,'b');
     while (cb != NULL) { 
         runningtot += b;
@@ -37,14 +35,12 @@ int main() {
         cb = strchr(cb+1,'b');
         
     }
-    printf("%d\n", runningtot);
     cc = strchr(letter,'c');
     while (cc != NULL) { 
         runningtot += c;
         length++;
         cc = strchr(cc+1,'c');
     }
-    printf("%d\n", runningtot);
     cd = strchr(letter,'d');
     while (cd != NULL) { 
         runningtot++;
@@ -56,6 +52,15 @@ int main() {
     gpa = (double) runningtot/length;
     printf("Your gpa is %f\n", gpa);
     
+    if(gpa == 4){
+        printf("You are doing ok");
+    }
+    else if(gpa < 4 && gpa >= 3.6){
+        printf("This is a subpar performance");
+    }
+    else{
+        printf("You need to pick it up...");
+    }
 
     return 0;
 
